@@ -1,41 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;800&family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;800&family=Bebas+Neue&family=Satisfy&display=swap");
 
 .header-content {
   background-size: cover;
   background-size: 100% 100%;
-  text-align: center;
   background-color: #CE2829;
   background-position: center;
   overflow: auto;
-  height: 67.5em;
+  height: 110vh;
+  background-image: url(../Assets/mvp-banner.png);
 }
 
 .font-style {
+  margin-top: 2em;
   text-align: center;
   width: 100%;
 }
+.firsat-font {
+ color:#FDC913;
+ font-family: 'Satisfy', cursive;
+ margin-top: 0%;
+ margin-bottom: 0%;
+ font-size: 32px;
+}
 
 .h1-font {
-  font-size: 20px;
+  font-size: 50x;
   font-weight: 800;
   color: white;
-  font-family: "Barlow", sans-serif;
+  font-family: 'Barlow', sans-serif;
 }
 .header2-font {
+  font-size: 86px;
   margin-top: 0;
   padding: 0%;
   color: white;
   font-family: 'Bebas Neue', sans-serif;
+  margin-bottom: 0;
+  margin-top: 0;
   
   
 }
 .button1 {
-  font-family: "Barlow", sans-serif;
+  font-family: 'Barlow', sans-serif;
   border-radius: 3.125em;
   border: none;
   background-color: #FDC913;
   padding: .7em 2em;
   width:12em;
+  margin-top: 0.5em;
   
   color:#292929;
 }
