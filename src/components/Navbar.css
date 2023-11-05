@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,900&family=Quattrocento&family=Satisfy&display=swap");
+
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    width: 70%;
+    margin-left: 150px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.navbar-content a {
+    text-decoration: none;
+    color: #292929;
+    font-family: "Quattrocento", serif;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.a-content {
+    text-align: center;
+    align-content: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon{
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: .5em;
+}

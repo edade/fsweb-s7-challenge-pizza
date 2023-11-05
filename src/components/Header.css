@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;800&family=Bebas+Neue&display=swap");
+
+.header-content {
+  background-size: cover;
+  background-size: 100% 100%;
+  text-align: center;
+  background-color: #CE2829;
+  background-position: center;
+  overflow: auto;
+  height: 67.5em;
+}
+
+.font-style {
+  text-align: center;
+  width: 100%;
+}
+
+.h1-font {
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  font-family: "Barlow", sans-serif;
+}
+.header2-font {
+  margin-top: 0;
+  padding: 0%;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  
+  
+}
+.button1 {
+  font-family: "Barlow", sans-serif;
+  border-radius: 3.125em;
+  border: none;
+  background-color: #FDC913;
+  padding: .7em 2em;
+  width:12em;
+  
+  color:#292929;
+}
