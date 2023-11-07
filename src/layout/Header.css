@@ -1,0 +1,19 @@
+.header-style {
+  background-color: #ce2829;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+.nav-style {
+  text-align: left;
+}
+
+.container {
+
+width: 50%;
+margin: 0 auto;
+
+}

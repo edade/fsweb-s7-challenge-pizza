@@ -2,8 +2,7 @@
 
 .header-content {
   background-size: cover;
-  background-size: 100% 100%;
-  background-color: #CE2829;
+  background-color: #ce2829;
   background-position: center;
   overflow: auto;
   height: 110vh;
@@ -16,38 +15,40 @@
   width: 100%;
 }
 .firsat-font {
- color:#FDC913;
- font-family: 'Satisfy', cursive;
- margin-top: 0%;
- margin-bottom: 0%;
- font-size: 32px;
+  color: #fdc913;
+  font-family: "Satisfy", cursive;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  font-size: 32px;
 }
 
-.h1-font {
-  font-size: 50x;
-  font-weight: 800;
-  color: white;
-  font-family: 'Barlow', sans-serif;
-}
 .header2-font {
+  display: inline;
   font-size: 86px;
-  margin-top: 0;
   padding: 0%;
   color: white;
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   margin-bottom: 0;
   margin-top: 0;
-  
-  
+}
+
+.header3-font {
+  font-size: 86px;
+  padding: 0%;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 .button1 {
-  font-family: 'Barlow', sans-serif;
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
   border-radius: 3.125em;
   border: none;
-  background-color: #FDC913;
-  padding: .7em 2em;
-  width:12em;
+  background-color: #fdc913;
+  padding: 0.7em 2em;
+  width: 12em;
   margin-top: 0.5em;
-  
-  color:#292929;
+
+  color: #292929;
 }
