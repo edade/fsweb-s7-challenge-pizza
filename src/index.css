@@ -12,3 +12,182 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* HOME SAYFASI İÇİN Home.js*/
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500;800&family=Bebas+Neue&family=Satisfy&display=swap");
+
+.header-content {
+  background-size: cover;
+  background-color: #ce2829;
+  background-position: center;
+  overflow: auto;
+  height: 110vh;
+  background-image: url(./Assets/mvp-banner.png);
+}
+
+.font-style {
+  margin-top: 2em;
+  text-align: center;
+  width: 100%;
+}
+.firsat-font {
+  color: #fdc913;
+  font-family: "Satisfy", cursive;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  font-size: 32px;
+}
+
+.header2-font {
+  display: inline;
+  font-size: 86px;
+  padding: 0%;
+  color: white;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1;
+}
+
+.header3-font {
+  font-size: 86px;
+  padding: 0%;
+  color: white;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.button1 {
+  text-decoration: none;
+  font-family: "Barlow", sans-serif;
+  border-radius: 3.125em;
+  border: none;
+  background-color: #fdc913;
+  padding: 0.7em 2em;
+  width: 12em;
+  margin-top: 0.5em;
+
+  color: #292929;
+}
+
+/* SİPARİŞ SAYFASINDAKİ HEADER İÇİN Header.js*/
+
+.header-style {
+  background-color: #ce2829;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+.nav-style {
+  text-align: left;
+}
+
+/*SİPARİŞ SAYFASINDAKİ CONTENT İÇİN OrderPizzaContent.js */
+
+h1 {
+  font-size: 19px;
+}
+.container {
+  width: 40%;
+  margin: 0 auto;
+  font-family: "Barlow", sanserif;
+}
+.same-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.star-style {
+  color:red
+}
+
+.fiyat-style {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+/*checbox.js için*/
+
+.checkbox {
+  display: grid;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  grid-template-columns: repeat(3, 5fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 0.5rem;
+  text-align: left;
+  margin: 0 auto;
+}
+
+#not-part {
+  width: 100%;
+  height: 3.5em;
+  border-radius: 0.4em;
+  border: 1px solid #D9D9D9;
+}
+
+.button-adet {
+  width: 2.5em;
+  height: 3.5em;
+  background-color: #fdc913;
+  border-radius: 0.5em;
+  border: none;
+  
+  
+}
+
+.button-adet-group {
+  border-radius: 0.5em;
+  border: 1px solid  #D9D9D9;
+  margin: 0;
+  width: fit-content;
+
+}
+.input-adet{
+  width: 2.5em;
+  height: 3.5em;
+  border: none;
+  text-align: center;
+
+
+}
+
+.order-sum{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-family: "Barlow", sanserif;
+
+}
+.div-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+#toplam-style {
+  color: #ce2829;
+}
+
+
+.sipariş-toplam {
+  padding: 2em;
+ width: 20em;
+ height: 10em;
+ border: 1px solid #D9D9D9 ;
+ border-radius: 0.5em;
+ flex-direction: column;
+
+ 
+}
+.siparis-ver-button {
+  width: 100%;
+  background-color: #fdc913;
+  border: none;
+  height: 3em;
+  display: f;
+}

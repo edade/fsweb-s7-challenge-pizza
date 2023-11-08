@@ -1,6 +1,6 @@
 import React from "react";
-import "./Home.css";
 import Logo from "../Assets/logo.svg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -8,9 +8,9 @@ const Home = () => {
       <div className="font-style">
         <img src={Logo} alt="" />
         <p className="firsat-font"> fıratı kaçırma</p>
-        <p className="header2-font">KOD ACIKTIRIR,</p>
+        <p className="header2-font">KOD ACIKTIRIR </p>
         <p className="header3-font">PİZZA, DOYURUR</p>
-        <a className="button1" type="button" href="/order-pizza">ACIKTIM </a>
+        <Link to="/order-pizza" className="button1" type="button" >ACIKTIM </Link>
       </div>
     </div>
   );

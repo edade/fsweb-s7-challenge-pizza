@@ -16,9 +16,6 @@ const App = () => {
         <Route path="/order-pizza" exact>
           <OrderPizza/>
         </Route>
-        <Route path="/" exact>
-          <OrderPizza/>
-        </Route>
       </Switch>
     </div>
     </div>
