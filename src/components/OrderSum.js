@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 const OrderSum = ({
   pizzaAdet,
@@ -31,7 +33,10 @@ const OrderSum = ({
           <label htmlFor="toplam-fiyat">Toplam</label>
           <span id="toplam-fiyat">{toplamFiyat}₺</span>
         </div>
+        <Link to="/order-button">
         <button className="siparis-ver-button" type="submit">SİPARİŞ VER</button>
+        </Link>
+        
       </div>
     </form>
    

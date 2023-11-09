@@ -13,7 +13,6 @@ const OrderPizzaContent = () => {
   const [boyut, setBoyut] = useState("");
   const [hamur, setHamur] = useState("");
   const [secimler, setSecimler] = useState(0);
-  const [checkbox, setCheckbox] = useState(false);
   const [seciliMalzemeler, setSeciliMalzemeler] = useState([]);
 
   const inputChangeHandler = (e) => setBoyut(e.target.value);
@@ -36,32 +35,39 @@ const OrderPizzaContent = () => {
     setPizzaAdet(pizzaAdet - 1);
   };
 
+
   useEffect(() => {
+    // Boyut seçildiğinde ek fiyatı hesapla
+    let boyutEkFiyat = 0;
     if (boyut === "küçük") {
-      setToplamFiyat(pizzaAdet * pizzaFiyat + 5);
+      boyutEkFiyat = 0;
     } else if (boyut === "orta") {
-      setToplamFiyat(pizzaAdet * pizzaFiyat + 15);
+      boyutEkFiyat = 10;
     } else if (boyut === "büyük") {
-      setToplamFiyat(pizzaAdet * pizzaFiyat + 25);
+      boyutEkFiyat = 20;
     }
-  }, [pizzaAdet, pizzaFiyat, boyut]);
-
-  useEffect(() => {
-    setToplamFiyat(pizzaAdet * pizzaFiyat);
-  }, [pizzaAdet]);
-
-  useEffect(() => {
+  
+    // Hamur seçildiğinde ek fiyatı hesapla
+    let hamurEkFiyat = 0;
     if (hamur === "ince") {
-      setToplamFiyat(toplamFiyat + 25);
+      hamurEkFiyat = 0;
+    } else if (hamur === "standart") {
+      hamurEkFiyat = 30;
+    } else if (hamur === "kalın") {
+      hamurEkFiyat = 40;
     }
-    else if (hamur === "standart") {
-      setToplamFiyat(toplamFiyat + 50);
-    }
-    else if (hamur === "kalın") {
-      setToplamFiyat(toplamFiyat + 70);
-    }
-  }, [hamur]);
-
+  
+    // Seçili malzemelerin toplam fiyatını hesapla
+    let malzemeEkFiyat = seciliMalzemeler.length * 5;
+  
+    // Toplam fiyatı hesapla ve güncelle
+    const yeniToplamFiyat = pizzaAdet * (pizzaFiyat + boyutEkFiyat + hamurEkFiyat + malzemeEkFiyat) ;
+    setToplamFiyat(yeniToplamFiyat);
+    setSecimler(boyutEkFiyat + hamurEkFiyat + seciliMalzemeler.length * 5);
+  }, [boyut, hamur, pizzaAdet, pizzaFiyat, seciliMalzemeler]);
+  
+  
+// Submite basılınca sayfanın rerender olmasını engellemek için preventDefault özelliğinden yararlanıyoruz
   function handleSubmit(e) {
     e.preventDefault();
   }
@@ -137,7 +143,7 @@ const OrderPizzaContent = () => {
 
           <p>En fazla 10 Malzeme seçebilirsiniz 5₺</p>
         </div>
-        <Checkbox checkbox= {checkbox} checkboxChangeHandler={checkboxChangeHandler} seciliMalzemeler={seciliMalzemeler} />
+        <Checkbox checkboxChangeHandler={checkboxChangeHandler} seciliMalzemeler={seciliMalzemeler} />
       </form>
       <Note />
       <OrderSum
