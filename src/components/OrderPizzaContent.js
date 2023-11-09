@@ -161,7 +161,7 @@ const OrderPizzaContent = () => {
           <h2>
             Hamur Seç <span className="star-style">*</span>{" "}
           </h2>
-          <select id="pizza" value={hamur} onChange={selectChangeHandler}>
+          <select id="pizza-hamur" value={hamur} onChange={selectChangeHandler}>
             <option value={"hamur-kalınlığı"}>Hamur Kalınlığı</option>
             <option value={"ince"}>İnce</option>
             <option value={"standart"}>Standart</option>

@@ -25,6 +25,7 @@ const Checkbox =({  seciliMalzemeler, checkboxChangeHandler } ) => {
         <div className="checkbox">
            {malzemeler.map((malzeme) => (<label key={malzeme.label}>
             <input type="checkbox"
+            id="malzemeler-checkbox"
             name={malzeme.value}
             checked={seciliMalzemeler.includes(malzeme.value)} 
             onChange={() => checkboxChangeHandler(malzeme.value)}/>

@@ -33,7 +33,7 @@ const OrderSum = ({
           <label htmlFor="toplam-fiyat">Toplam</label>
           <span id="toplam-fiyat">{toplamFiyat}₺</span>
         </div>
-        <Link to="/order-button">
+        <Link id="order-button"  to="/order-button">
         <button className="siparis-ver-button" type="submit">SİPARİŞ VER</button>
         </Link>
         
