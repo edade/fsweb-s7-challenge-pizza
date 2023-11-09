@@ -1,15 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 const OrderSum = ({
   pizzaAdet,
   sayacArttir,
   sayacAzalt,
-  malzemeFiyat,
   toplamFiyat,
   secimler,
+  boyut,
+  hamur,
 }) => {
+  function isValid() {
+    // Hamur ve boyut seçilmişse siparişi onayla düğmesini etkinleştirelim
+    if (boyut && hamur) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   return (
     <div className="order-sum">
       <div className="button-adet-group">
@@ -22,24 +31,28 @@ const OrderSum = ({
           <i className="fa-solid fa-plus" />
         </button>
       </div>
-    <form onSubmit={(e) => e.preventDefault()} >
-           <div className="sipariş-toplam">
-        <h3>Sipariş Toplamı</h3>
-        <div className="div-group" >
-          <label htmlFor="secim-toplam">Seçimler</label>
-          <span id="secim-toplam">{secimler}₺</span>
+      <form onSubmit={(e) => e.preventDefault()}>
+        <div className="sipariş-toplam">
+          <h3>Sipariş Toplamı</h3>
+          <div className="div-group">
+            <label htmlFor="secim-toplam">Seçimler</label>
+            <span id="secim-toplam">{secimler}₺</span>
+          </div>
+          <div className="div-group" id="toplam-style">
+            <label htmlFor="toplam-fiyat">Toplam</label>
+            <span id="toplam-fiyat">{toplamFiyat}₺</span>
+          </div>
+          <Link id="order-button" to="/order-button">
+            <button
+              disabled={!isValid()}
+              className="siparis-ver-button"
+              type="submit"
+            >
+              SİPARİŞ VER
+            </button>
+          </Link>
         </div>
-        <div className="div-group" id="toplam-style">
-          <label htmlFor="toplam-fiyat">Toplam</label>
-          <span id="toplam-fiyat">{toplamFiyat}₺</span>
-        </div>
-        <Link id="order-button"  to="/order-button">
-        <button className="siparis-ver-button" type="submit">SİPARİŞ VER</button>
-        </Link>
-        
-      </div>
-    </form>
-   
+      </form>
     </div>
   );
 };

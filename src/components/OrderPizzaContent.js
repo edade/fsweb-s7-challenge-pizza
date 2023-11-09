@@ -38,7 +38,7 @@ const OrderPizzaContent = () => {
 
 
   useEffect(() => {
-    // Boyut seçildiğinde ek fiyatı hesapla
+    // Boyut seçildiğinde ek fiyatı hesaplayalım
     let boyutEkFiyat = 0;
     if (boyut === "küçük") {
       boyutEkFiyat = 0;
@@ -48,7 +48,7 @@ const OrderPizzaContent = () => {
       boyutEkFiyat = 20;
     }
   
-    // Hamur seçildiğinde ek fiyatı hesapla
+    // Hamur seçildiğinde ek fiyatı hesaplayalım
     let hamurEkFiyat = 0;
     if (hamur === "ince") {
       hamurEkFiyat = 0;
@@ -58,10 +58,10 @@ const OrderPizzaContent = () => {
       hamurEkFiyat = 40;
     }
   
-    // Seçili malzemelerin toplam fiyatını hesapla
+    // Seçili malzemelerin toplam fiyatını hesaplayalım
     let malzemeEkFiyat = seciliMalzemeler.length * 5;
   
-    // Toplam fiyatı hesapla ve güncelle
+    // Toplam fiyatı hesaplayıp ve güncelleyelim
     const yeniToplamFiyat = pizzaAdet * (pizzaFiyat + boyutEkFiyat + hamurEkFiyat + malzemeEkFiyat) ;
     setToplamFiyat(yeniToplamFiyat);
     setSecimler(boyutEkFiyat + hamurEkFiyat + seciliMalzemeler.length * 5);
@@ -183,9 +183,10 @@ const OrderPizzaContent = () => {
         pizzaAdet={pizzaAdet}
         sayacArttir={sayacArttir}
         sayacAzalt={sayacAzalt}
-        malzemeFiyat={malzemeFiyat}
         toplamFiyat={toplamFiyat}
         secimler={secimler}
+        boyut={boyut}
+        hamur={hamur}
       />
     </div>
   );

@@ -1,6 +1,4 @@
 import React from "react";
-import OrderPizzaContent from "./OrderPizzaContent";
-import { useState } from "react";
 
 const Checkbox =({  seciliMalzemeler, checkboxChangeHandler } ) => {
 
