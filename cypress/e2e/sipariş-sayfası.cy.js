@@ -30,3 +30,33 @@ describe("sipariş sayfası testi", () => {
       })
 
   });
+
+  describe("inputa yazı girme testi", () => {
+    beforeEach(() => {
+        cy.visit("http://localhost:3000/order-pizza")
+    })
+    it("inputa yazı yazalım", () => {
+        cy.get("#not-part").type("Lütfen pizza sıcak olabilir mi?")
+    })
+  })
+
+  describe("Checkbox ile Birden Fazla Malzeme Seçme Testi", () => {
+    it("Birden fazla malzeme seçelim", () => {
+      
+      cy.visit("http://localhost:3000/order-pizza"); 
+  
+      // Malzemeleri checkbox sınıfına sahip elemanları al
+      cy.get(".checkbox input[type='checkbox']").each((checkbox, index) => {
+        // Her bir checkbox'ı işaretle
+        if (index < 3) {
+            cy.get(checkbox).check();
+          }
+      });
+  
+      // İşaretlenen checkbox sayısını kontrol et .filter:checked sadece seçili olanları filtreler
+      cy.get(".checkbox input[type='checkbox']").filter(":checked").should("have.length", 3);
+    });
+  });
+
+
+  
