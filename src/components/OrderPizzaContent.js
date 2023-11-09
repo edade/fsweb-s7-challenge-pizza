@@ -8,7 +8,6 @@ import * as Yup from 'yup';
 
 const OrderPizzaContent = () => {
   const [pizzaFiyat, setPizzaFiyat] = useState(85.5);
-  const [malzemeFiyat, setMalzemeFiyat] = useState(0);
   const [pizzaAdet, setPizzaAdet] = useState(1);
   const [toplamFiyat, setToplamFiyat] = useState(pizzaFiyat);
   const [boyut, setBoyut] = useState("");
@@ -16,10 +15,12 @@ const OrderPizzaContent = () => {
   const [secimler, setSecimler] = useState(0);
   const [seciliMalzemeler, setSeciliMalzemeler] = useState([]);
 
+// boyut seçimini izleyip değişiklik olunca boyut state'ini günceller
   const inputChangeHandler = (e) => setBoyut(e.target.value);
-
+// hamur seçimini izleyip değişiklik olunca hamur state'ini günceller
   const selectChangeHandler = (e) => setHamur(e.target.value);
 
+// seçili malzemeler listesini izleyip değişiklik olunca malzemelerden biri seçiliyse tiki kaldırır seçili değilse tik koyar ve seçili malzemeler listesine malzemeyi ekler
   const checkboxChangeHandler = (malzeme) => {
     if (seciliMalzemeler.includes(malzeme)) {
       setSeciliMalzemeler(seciliMalzemeler.filter((item) => item !== malzeme));
@@ -28,10 +29,12 @@ const OrderPizzaContent = () => {
     }
   };
 
+  // order-pizza sayfasındaki buton ile pizza adedini 1 arttırır
   const sayacArttir = () => {
     setPizzaAdet(pizzaAdet + 1);
   };
 
+  //order pizza sayfasındaki buton ile pizza adedini 1 azaltır
   const sayacAzalt = () => {
     setPizzaAdet(pizzaAdet - 1);
   };
@@ -67,6 +70,9 @@ const OrderPizzaContent = () => {
     setSecimler(boyutEkFiyat + hamurEkFiyat + seciliMalzemeler.length * 5);
   }, [boyut, hamur, pizzaAdet, pizzaFiyat, seciliMalzemeler]);
 
+  // yup için
+  /*
+  2 form stateleri
   const [formState, setFormState] = useState({
     seciliMalzemeler: [],
     boyut: "",
@@ -81,6 +87,7 @@ const OrderPizzaContent = () => {
     pizzaAdet: ""
 
   });
+  3.validasyon
   const [formValid, setFormValid] = useState(true);
 
   useEffect(() => {
@@ -90,15 +97,15 @@ const OrderPizzaContent = () => {
       }, [formState]);
 
 
-  
-
+     1 FORM ŞEMASI
   const productFormSchema = Yup.object().shape({
     seciliMalzemeler: Yup.array().max(10, "En fazla 10 malzeme seçebilirsiniz.").min(3, "En az 3 malzeme seçebilirsiniz"),
     boyut: Yup.string().required("Boyut seçimi yapmalısınız"),
     hamur: Yup.string().required("Hamur seçimi yapmalısınız"),
     pizzaAdet: Yup.number().min(1, "Adet eksi değer alamaz.")
 
-  });
+  }); */
+
   
 // Submite basılınca sayfanın rerender olmasını engellemek için preventDefault özelliğinden yararlanıyoruz
   function handleSubmit(e) {

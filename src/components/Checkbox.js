@@ -20,11 +20,13 @@ const Checkbox =({  seciliMalzemeler, checkboxChangeHandler } ) => {
         { value: "jalepeno", label: "Jalepeno" },
       ];
     return (
+        //malzemeler listesi map ile her malzeme için bir label oluşturur
         <div className="checkbox">
            {malzemeler.map((malzeme) => (<label key={malzeme.label}>
             <input type="checkbox"
             id="malzemeler-checkbox"
             name={malzeme.value}
+            //eğer malzeme seçili malzemeler listesi içindeyse checked attr ile o malzemeye tik atılır
             checked={seciliMalzemeler.includes(malzeme.value)} 
             onChange={() => checkboxChangeHandler(malzeme.value)}/>
             

@@ -53,7 +53,7 @@ code {
   padding: 0%;
   color: white;
   font-family: "Barlow", sans-serif;
-  margin-bottom: 0;
+  margin-bottom: 0.5em;
   margin-top: 0;
 }
 .button1 {
@@ -64,7 +64,6 @@ code {
   background-color: #fdc913;
   padding: 0.7em 2em;
   width: 12em;
-  margin: 0.5em;
 
   color: #292929;
 }
