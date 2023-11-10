@@ -24,7 +24,8 @@ describe("sipariş sayfası testi", () => {
          // should ile secimlerimizi yaptıktan sonra fiyatın doğru güncellendiğini test edelim
         cy.get("#toplam-fiyat").should("have.text", "261₺");
       })
-      it("Sipariş ver butonunun success sayfasına gittiğini test edelim", () => {
+      it("Sipariş ver butonunun hamur  ve boyut seçilmdeiyse success sayfasına gidemediğini test edelim", () => {
+
         cy.get("#order-pizza").click();
         cy.get("#order-button").click();
       })
