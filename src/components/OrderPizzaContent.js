@@ -135,6 +135,7 @@ const OrderPizzaContent = () => {
           </h2>
           <div>
             <input
+            className="boyut"
               type="radio"
               id="small"
               value={"küçük"}
@@ -145,6 +146,7 @@ const OrderPizzaContent = () => {
           </div>
           <div>
             <input
+            className="boyut"
               type="radio"
               id="medium"
               value={"orta"}
@@ -155,6 +157,7 @@ const OrderPizzaContent = () => {
           </div>
           <div>
             <input
+            className="boyut"
               type="radio"
               id="large"
               value={"büyük"}

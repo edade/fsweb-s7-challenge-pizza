@@ -3,7 +3,7 @@ describe("sipariş sayfası testi", () => {
       cy.visit("http://localhost:3000/");
     });
   
-    it("Sipariş sayfasında fiyatları seçimler fiyat toplamını kontrol edelim", () => {
+    it("Sipariş sayfasında seçimler fiyat toplamını kontrol edelim", () => {
         // önce anasayfadan sipariş sayfasına geçiş yapalım
       cy.get("#order-pizza").click();
       // hamur seç için standardı, boyut seç için ortayı ve checkboxlardan birini seçelim. Pizza adedini arttıralım

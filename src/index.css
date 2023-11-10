@@ -107,6 +107,10 @@ h1 {
   font-size: 25px;
 }
 
+.boyut {
+  margin-bottom: 1em;
+}
+
 /*checbox.js için*/
 
 .checkbox {
